@@ -130,7 +130,7 @@
     echo "<br>";
 
     //Adicionando elemento na posição 14 do array associativo
-    $carro[14]=["seguradora"=>"Azul Seguros"];
+    $carro[14]=["Azul Seguros"];
     var_dump($carro);
     echo "<br>";
     echo "<br>";

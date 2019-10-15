@@ -110,26 +110,4 @@
 
 // echo "<br><br>";
 
-//Tarefa 03
-// Imprimindo números de 1 a 100.
-
-// for($i=0; $i<=100; $i++){
-//     echo $i."<br>";
-// }
-
-// $numeroRandom = mt_rand(1,100);
-
-// for($i=0; $i<=$numeroRandom; $i++){
-//     echo $i."<br>";
-// }
-
-$moeda = mt_rand(0,1);
-$quantidadeDeCara = 0;
-$quantidadeDeLoop = 1;
-
-while($moeda == 1 && $quantidade < 5){
-    echo "Moeda cara <br>";
-    $quantidade++;
-}
-
 ?>
