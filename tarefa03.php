@@ -55,11 +55,11 @@
 // }while($i<count($nomes));
 
 //Exercício 07 - Array com 10 números aleatórios. Imprimir até sair o 5.
-$numerosAleatorios = [];
-for($i=0;$i<10;$i++){
-    $numerosAleatorios[] = mt_rand(1,10);
-    // echo $numerosAleatorios."<br>";
-}
+// $numerosAleatorios = [];
+// for($i=0;$i<10;$i++){
+//     $numerosAleatorios[] = mt_rand(1,10);
+//     // echo $numerosAleatorios."<br>";
+// }
 //Resolvendo com for
 // for($i=0; $i<count($numerosAleatorios); $i++){
 //     if($numerosAleatorios[$i] != 5){
@@ -162,16 +162,30 @@ $ceu = [
         ];
 
         foreach($ceu as $pais=>$cidades){
-            foreach($cidades as $cidade){
-                if($pais=="Argentina" || $pais=="Brasil" || $pais=="Colômbia"){
-                    $ceu[$pais][] = ["naAmerica" => "true"]; 
-                }else{
-                    $ceu[$pais][] = ["naAmerica" => "true"];
-                }
-            } 
+            if($pais=="Argentina" || $pais=="Brasil" || $pais=="Colômbia"){
+                $ceu[$pais]["naAmerica"] = true; 
+            }else{
+                $ceu[$pais]["naAmerica"] = false; 
+            }
+    
         }
 
+    foreach ($ceu as $pais => $cidades) {
 
-var_dump($ceu);
+        foreach ($cidades as $key=>$cidade) {
+            $america = $cidades["naAmerica"];
+            
+            if($america){
+                if($key != "naAmerica"){
+                    echo "$cidade <br>";
+                }
+               
+            }
+        }
+        
+    }
+
+
+// var_dump($ceu);
 
 ?>
